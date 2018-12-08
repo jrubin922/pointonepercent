@@ -6,15 +6,18 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            annualIncome: 25000,
+            annualIncome: null,
             percentageOfIncome: 0.1,
-            recommendedDonationAmount: 25
+            recommendedDonationAmount: null
         }
     }
 
     render() {
         return (
-           <DonationPage />
+            <DonationPage 
+                annualIncome={this.state.annualIncome}
+                percentageOfIncome={this.state.percentageOfIncome}
+                recommendedDonationAmount={this.state.recommendedDonationAmount} />
         );
     }
 
