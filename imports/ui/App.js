@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DonationPage from './DonationPage.js'
  
 // App component - represents the whole app
 export default class App extends Component {
@@ -10,15 +11,14 @@ export default class App extends Component {
             recommendedDonationAmount: 25
         }
     }
-    
+
     render() {
         return (
-            <div>
-                <header>
-                    <h1>Point One Percent Challenge</h1>
-                </header>
-                <div>Your Salary: <input type="number" name="salary" min="0"/></div>
-            </div>
+           <DonationPage />
         );
+    }
+
+    _handleDonationPayment = (donationAmount) => {
+        // Handle payment stuff in this function
     }
 }
