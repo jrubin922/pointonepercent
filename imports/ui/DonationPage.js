@@ -6,11 +6,19 @@ export default class DonationPage extends Component {
     }
 
     render() {
-        const { 
+        const {
+            // Props
             annualIncome,
             percentageOfIncome,
-            recommendedDonationAmount
+            recommendedDonationAmount,
+
+            // Handlers
+            handleAnnualIncomeChange
         } = this.props;
+
+        const handleAnnualIncomeEvent = (event) => {
+            handleAnnualIncomeChange(event.target.value);
+        };
 
         return (
             <div>
@@ -22,6 +30,7 @@ export default class DonationPage extends Component {
                         type="number"
                         name="annual-income"
                         placeholder="25,000"
+                        onChange={handleAnnualIncomeEvent}
                         min="0" />
                 </div>
                 <div>
@@ -35,6 +44,7 @@ export default class DonationPage extends Component {
                     <input
                         type="number"
                         name="donation-amount"
+                        value={recommendedDonationAmount}
                         placeholder="25"
                         min="0"/>
                 </div>
