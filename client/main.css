@@ -2,3 +2,16 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+.donation-steps-row {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+.donation-steps-column {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}

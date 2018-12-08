@@ -32,34 +32,38 @@ export default class DonationPage extends Component {
 
         return (
             <div>
-                <header>
-                    <h1>Point One Percent Challenge</h1>
-                </header>
                 <div>
-                    <input 
-                        type="number"
-                        name="annual-income"
-                        placeholder="25,000"
-                        value={annualIncome}
-                        onChange={handleAnnualIncomeEvent}
-                        min="0" />
+                    <header>
+                        <h1>Point One Percent Challenge</h1>
+                    </header>
                 </div>
-                <div>
-                    <input
-                        type="number"
-                        name="percentage-of-income"
-                        value={percentageOfIncome}
-                        onChange={handlePercentageOfIncomeEvent}
-                        min="0" />
-                </div>
-                <div>
-                    <input
-                        type="number"
-                        name="donation-amount"
-                        placeholder="25"
-                        value={recommendedDonationAmount}
-                        onChange={handleDonationAmountEvent}
-                        min="0"/>
+                <div className="donation-steps-row">
+                    <div className='donation-steps-column'>
+                        <input 
+                            type="number"
+                            name="annual-income"
+                            placeholder="25,000"
+                            value={annualIncome ? annualIncome : ""}
+                            onChange={handleAnnualIncomeEvent}
+                            min="0" />
+                    </div>
+                    <div className='donation-steps-column'>
+                        <input
+                            type="number"
+                            name="percentage-of-income"
+                            value={percentageOfIncome ? percentageOfIncome : ""}
+                            onChange={handlePercentageOfIncomeEvent}
+                            min="0" />
+                    </div>
+                    <div className='donation-steps-column'>
+                        <input
+                            type="number"
+                            name="donation-amount"
+                            placeholder="25"
+                            value={recommendedDonationAmount ? recommendedDonationAmount : ""}
+                            onChange={handleDonationAmountEvent}
+                            min="0"/>
+                    </div>
                 </div>
             </div>
         );
