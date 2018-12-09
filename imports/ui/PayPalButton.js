@@ -15,6 +15,31 @@ export default class PayPalButton extends Component {
 			//Handlers
 		} = this.props;
 
+		// Specify the style of the button
+		let style = {
+		 	layout: 'horizontal',  // horizontal | vertical
+		 	size:   'responsive',    // medium | large | responsive
+		 	shape:  'pill',      // pill | rect
+		 	color:  'gold',      // gold | blue | silver | white | black
+		 	fundingOptions: 'false',	// (only with horizontal layout) whether or not to show the funding instrument icons below the payment button
+		 	tagline: 'false',
+		};
+
+		// Specify allowed and disallowed funding sources
+		//
+		// Options:
+		// - paypal.FUNDING.CARD
+		// - paypal.FUNDING.CREDIT
+		// - paypal.FUNDING.ELV
+		let funding = {
+		 	allowed: [
+		   		paypal.FUNDING.CARD,
+		  	],
+		 	disallowed: [		    	
+		 		
+	 		]
+		};
+
 		let client = {
             sandbox: 'ATs6INmGDSnmxqAtT-bI5_-ZNUJ9sBAszAVSQdpnkqSK0l3lYJsnP2Z3a-YtS2otZi5ME4n0uTev3uuI',
 	  		production: '<insert production client id>'
@@ -49,6 +74,8 @@ export default class PayPalButton extends Component {
 
         return (
         	<PayPalButton
+        		style={style}
+        		funding={funding}
                 client={client}
                 payment={payment}
                 commit={true}	
