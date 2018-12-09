@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PayPalButton from './PayPalButton.js'
 
 export default class DonationPage extends Component {
     constructor(props) {
@@ -68,6 +69,11 @@ export default class DonationPage extends Component {
                             onChange={handleDonationAmountEvent}
                             min="0"/>
                     </div>
+                </div>
+
+                <div>
+                    <PayPalButton 
+                        transactionAmount={donationAmount}/>
                 </div>
             </div>
         );

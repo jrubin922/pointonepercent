@@ -10,6 +10,7 @@
   "dependencies": {
     "@babel/runtime": "^7.2.0",
     "meteor-node-stubs": "^0.4.1",
+    "paypal-checkout": "^4.0.239",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
