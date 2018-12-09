@@ -8,8 +8,10 @@ export default class App extends Component {
         super(props);
         this.state = { 
             annualIncome: null,
+            annualIncomeText: "",
             percentageOfIncome: 0.1,
-            recommendedDonationAmount: null
+            donationAmount: null,
+            donationAmountText: ""
         }
         this._handleAnnualIncomeChange = this._handleAnnualIncomeChange.bind(this);
         this._handlePercentageOfIncomeChange = this._handlePercentageOfIncomeChange.bind(this);
@@ -21,8 +23,10 @@ export default class App extends Component {
         return (
             <DonationPage 
                 annualIncome={this.state.annualIncome}
+                annualIncomeText={this.state.annualIncomeText}
                 percentageOfIncome={this.state.percentageOfIncome}
-                recommendedDonationAmount={this.state.recommendedDonationAmount}
+                donationAmount={this.state.donationAmount}
+                donationAmountText={this.state.donationAmountText}
                 handleAnnualIncomeChange={this._handleAnnualIncomeChange}
                 handlePercentageOfIncomeChange={this._handlePercentageOfIncomeChange}
                 handleDonationAmountChange={this._handleDonationAmountChange}/>
@@ -34,7 +38,7 @@ export default class App extends Component {
         const newDonationAmount = annualIncome * (percentageOfIncome / 100);
         this.setState({ 
             annualIncome: annualIncome,
-            recommendedDonationAmount: newDonationAmount
+            donationAmount: newDonationAmount
         });
     }
 
@@ -43,7 +47,7 @@ export default class App extends Component {
         const newDonationAmount = annualIncome * (percentageOfIncome / 100);
         this.setState({
             percentageOfIncome: percentageOfIncome,
-            recommendedDonationAmount: newDonationAmount
+            donationAmount: newDonationAmount
         });
     }
 
@@ -52,7 +56,7 @@ export default class App extends Component {
         const newPercentageOfIncome = (donationAmount / annualIncome) * 100;
         this.setState({
             percentageOfIncome: newPercentageOfIncome,
-            recommendedDonationAmount: donationAmount
+            donationAmount: donationAmount
         });
     }
 

@@ -9,8 +9,10 @@ export default class DonationPage extends Component {
         const {
             // Props
             annualIncome,
+            annualIncomeText,
             percentageOfIncome,
-            recommendedDonationAmount,
+            donationAmount,
+            donationAmountText,
 
             // Handlers
             handleAnnualIncomeChange,
@@ -39,13 +41,15 @@ export default class DonationPage extends Component {
                 </div>
                 <div className="donation-steps-row">
                     <div className='donation-steps-column'>
+                        <div className='donation-step'>
                         <input 
                             type="number"
                             name="annual-income"
                             placeholder="25,000"
                             value={annualIncome ? annualIncome : ""}
                             onChange={handleAnnualIncomeEvent}
-                            min="0" />
+                            min={0} />
+                        </div>
                     </div>
                     <div className='donation-steps-column'>
                         <input
@@ -60,7 +64,7 @@ export default class DonationPage extends Component {
                             type="number"
                             name="donation-amount"
                             placeholder="25"
-                            value={recommendedDonationAmount ? recommendedDonationAmount : ""}
+                            value={donationAmount ? donationAmount : ""}
                             onChange={handleDonationAmountEvent}
                             min="0"/>
                     </div>
