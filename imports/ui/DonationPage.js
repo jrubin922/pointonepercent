@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PayPalButton from './PayPalButton.js'
+import NumberFormat from 'react-number-format';
 
 export default class DonationPage extends Component {
     constructor(props) {
@@ -10,10 +11,8 @@ export default class DonationPage extends Component {
         const {
             // Props
             annualIncome,
-            annualIncomeText,
             percentageOfIncome,
             donationAmount,
-            donationAmountText,
 
             // Handlers
             handleAnnualIncomeChange,
@@ -21,16 +20,24 @@ export default class DonationPage extends Component {
             handleDonationAmountChange
         } = this.props;
 
-        const handleAnnualIncomeEvent = (event) => {
-            handleAnnualIncomeChange(event.target.value);
+        const handleAnnualIncomeEvent = (values) => {
+            const {formattedValue, value} = values;
+            handleAnnualIncomeChange(value);
         };
 
-        const handlePercentageOfIncomeEvent = (event) => {
-            handlePercentageOfIncomeChange(event.target.value);
+        const handlePercentageOfIncomeEvent = (values) => {
+            const {formattedValue, value} = values;
+            handlePercentageOfIncomeChange(value);
         };
 
-        const handleDonationAmountEvent = (event) => {
-            handleDonationAmountChange(event.target.value);
+        const checkPercentageOfIncomeValue = (values) => {
+            const {formattedValue, value} = values;
+            return (value >= 0 & value <= 200)
+        }
+
+        const handleDonationAmountEvent = (values) => {
+            const {formattedValue, value} = values;
+            handleDonationAmountChange(value);
         }
 
         return (
@@ -43,31 +50,35 @@ export default class DonationPage extends Component {
                 <div className="donation-steps-row">
                     <div className='donation-steps-column'>
                         <div className='donation-step'>
-                        <input 
-                            type="number"
-                            name="annual-income"
-                            placeholder="25,000"
-                            value={annualIncome ? annualIncome : ""}
-                            onChange={handleAnnualIncomeEvent}
-                            min={0} />
+                            <NumberFormat
+                                placeholder="$25,000"
+                                value={annualIncome ? annualIncome : ""}
+                                thousandSeparator=","
+                                decimalSeparator="."
+                                allowNegative={false}
+                                prefix="$"
+                                onValueChange={handleAnnualIncomeEvent}/>
                         </div>
                     </div>
                     <div className='donation-steps-column'>
-                        <input
-                            type="number"
-                            name="percentage-of-income"
+                        <NumberFormat
                             value={percentageOfIncome ? percentageOfIncome : ""}
-                            onChange={handlePercentageOfIncomeEvent}
-                            min="0" />
+                            decimalSeparator="."
+                            allowNegative={false}
+                            suffix="%"
+                            isAllowed={checkPercentageOfIncomeValue}
+                            onValueChange={handlePercentageOfIncomeEvent} />
                     </div>
                     <div className='donation-steps-column'>
-                        <input
-                            type="number"
-                            name="donation-amount"
-                            placeholder="25"
+                        <NumberFormat
+                            placeholder="$25"
                             value={donationAmount ? donationAmount : ""}
-                            onChange={handleDonationAmountEvent}
-                            min="0"/>
+                            thousandSeparator=","
+                            decimalSeparator="."
+                            allowNegative={false}
+                            prefix="$"
+                            onValueChange={handleDonationAmountEvent}
+                        />
                     </div>
                 </div>
 

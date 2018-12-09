@@ -8,10 +8,8 @@ export default class App extends Component {
         super(props);
         this.state = { 
             annualIncome: null,
-            annualIncomeText: "",
             percentageOfIncome: 0.1,
             donationAmount: null,
-            donationAmountText: ""
         }
         this._handleAnnualIncomeChange = this._handleAnnualIncomeChange.bind(this);
         this._handlePercentageOfIncomeChange = this._handlePercentageOfIncomeChange.bind(this);
@@ -23,10 +21,8 @@ export default class App extends Component {
         return (
             <DonationPage 
                 annualIncome={this.state.annualIncome}
-                annualIncomeText={this.state.annualIncomeText}
                 percentageOfIncome={this.state.percentageOfIncome}
                 donationAmount={this.state.donationAmount}
-                donationAmountText={this.state.donationAmountText}
                 handleAnnualIncomeChange={this._handleAnnualIncomeChange}
                 handlePercentageOfIncomeChange={this._handlePercentageOfIncomeChange}
                 handleDonationAmountChange={this._handleDonationAmountChange}/>
