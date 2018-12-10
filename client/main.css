@@ -1,40 +1,141 @@
-body {
-  padding: 10px;
-  font-family: sans-serif;
+.navigation-bar {
+  background-color: #f7567c;
+  height: 5em;
+}
+
+.navigation-logo {
+  padding-top:7px;
+  padding-left: 15px;
+  height:80%;
+  width:auto;
+  vertical-align: bottom;
+}
+
+.home-page-content {
+  background-color: #ffefe5;
+  height:100vh;
+  padding-left:100px;
+  padding-right:100px;
+  padding-top:75px;
+  text-align: center;
+}
+
+.point-one-line {
+  width:100%;
+  height:auto;
+}
+
+.challenge-button {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  height: 40px;
+  width: 200px;
+  color: white;
+  background-color: #f7567c;
+}
+
+.challenge-button:hover {
+  color: #f7567c;
+  background-color: white;
+}
+
+.line {
+  width:100%;
+  height:auto;
+}
+
+.slogan {
+  font-size: 100px;
+  font-family: 'Bree Serif', serif;
+}
+
+.message {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .donation-steps-row {
   padding-top: 5em;
   padding-bottom: 5em;
-  margin-left: 10em;
-  margin-right: 10em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-bottom:10em;
 }
 
 .donation-steps-column {
   float: left;
-  width: 33.33%;
+  width: 27%;
   text-align: center;
+  height: 100px;
+}
+
+.donation-steps-column-symbol {
+  width: 8%;
+  float: left;
+  text-align: center;
+  height: 100px;
+}
+
+.symbol {
+  position: relative;
+  top:46px;
+  font-size: 35px;
+}
+
+.donation-step-message {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 input {
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:300px;
+  width:150px;
   border:none;
   border-bottom:1px solid #757575;
+  position:relative;
+  left:25%;
+  text-align: center;
 }
 
 input:focus {
   outline:none;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
- 
-input[type="number"] {
-    -moz-appearance: textfield;
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 3em;
+  opacity: .5;
+}
+.hr-text:before {
+  content: '';
+  background: linear-gradient(to right, transparent, black, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 1.5em;
+  line-height: 3em;
+  color: black;
+  background-color: #fcfcfa;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PayPalButton from './PayPalButton.js'
+import NavigationBar from './NavigationBar.js'
 import NumberFormat from 'react-number-format';
 
 export default class DonationPage extends Component {
@@ -42,14 +43,14 @@ export default class DonationPage extends Component {
 
         return (
             <div>
+                <NavigationBar />
                 <div>
-                    <header>
-                        <h1>Point One Percent Challenge</h1>
-                    </header>
+                    Be The Change
                 </div>
                 <div className="donation-steps-row">
                     <div className='donation-steps-column'>
                         <div className='donation-step'>
+                            <div className='donation-step-message'>Enter your annual income</div>
                             <NumberFormat
                                 placeholder="$25,000"
                                 value={annualIncome ? annualIncome : ""}
@@ -60,7 +61,9 @@ export default class DonationPage extends Component {
                                 onValueChange={handleAnnualIncomeEvent}/>
                         </div>
                     </div>
+                    <div className='donation-steps-column-symbol'><div className='symbol'>x</div></div>
                     <div className='donation-steps-column'>
+                        <div className='donation-step-message'>Let's multiply by 0.1%</div>
                         <NumberFormat
                             value={percentageOfIncome ? percentageOfIncome : ""}
                             decimalSeparator="."
@@ -69,7 +72,9 @@ export default class DonationPage extends Component {
                             isAllowed={checkPercentageOfIncomeValue}
                             onValueChange={handlePercentageOfIncomeEvent} />
                     </div>
+                    <div className='donation-steps-column-symbol'><div className='symbol'>=</div></div>
                     <div className='donation-steps-column'>
+                        <div className='donation-step-message'>We recommend donating this much</div>
                         <NumberFormat
                             placeholder="$25"
                             value={donationAmount ? donationAmount : ""}
@@ -81,7 +86,6 @@ export default class DonationPage extends Component {
                         />
                     </div>
                 </div>
-
                 <div>
                     <PayPalButton 
                         transactionAmount={donationAmount}/>
