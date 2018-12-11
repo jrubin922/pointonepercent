@@ -51,7 +51,7 @@ export default class DonationPage extends Component {
                     <div className="donation-steps-row">
                         <div className='donation-steps-column'>
                             <div className='donation-step'>
-                                <div className='donation-step-message'>Enter your annual income</div>
+                                <div className='donation-step-message'>Enter your annual income:</div>
                                 <NumberFormat
                                     placeholder="$25,000"
                                     value={annualIncome ? annualIncome : ""}
@@ -64,7 +64,7 @@ export default class DonationPage extends Component {
                         </div>
                         <div className='donation-steps-column-symbol'><div className='symbol'>x</div></div>
                         <div className='donation-steps-column'>
-                            <div className='donation-step-message'>Let's multiply by 0.1%</div>
+                            <div className='donation-step-message'>Let's multiply by 0.1%:</div>
                             <NumberFormat
                                 value={percentageOfIncome ? percentageOfIncome : ""}
                                 decimalSeparator="."
@@ -75,7 +75,7 @@ export default class DonationPage extends Component {
                         </div>
                         <div className='donation-steps-column-symbol'><div className='symbol'>=</div></div>
                         <div className='donation-steps-column'>
-                            <div className='donation-step-message'>Our recommended donation</div>
+                            <div className='donation-step-message'>Our recommended donation:</div>
                             <NumberFormat
                                 placeholder="$25"
                                 value={donationAmount ? donationAmount : ""}
