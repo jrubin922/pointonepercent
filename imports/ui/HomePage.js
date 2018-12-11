@@ -18,15 +18,16 @@ export default class HomePage extends Component {
 				<div className="home-page-content">
 					<img className="point-one-line" src={"/images/pointoneline.png"} />
 					<div className="slogan">{"Small Act. Big Difference."}</div>
-					<div className="message">{"Point One Percent is a giving campaign built on a simple belief: if many people each commit to a small act of charity, the collective impact can change the world."}</div>
-					<div className="message">{"So what constitutes a small act of charity? Well, at Point One Percent, we believe it’s precisely... 0.1% of your yearly income! Yup, that’s it."}</div>
-					<div className="message">{"So how can such just one tenth of one percent of your income make such a big difference? Well, it’s really just some simple math:"}</div>
+					<div className="message">
+						Point One Percent is a giving campaign built on a simple belief:<br />I<b>f many people each commit to a small act of charity, the collective impact can change the world.</b>
+					</div>
+					<div className="message">{"The small act of donating just one tenth of one percent (0.1%) of your yearly income can make a big difference. It's really just some simple math:"}</div>
 
 					<Container className="formula-container">
 						<Row>
 				          <Col>
-				          	<h1 className="formula-term-title">130M</h1>
-				          	<p className="formula-term-subtitle">Full-Time Workers in the US</p>
+				          	<h1 className="formula-term-title">110M</h1>
+				          	<p className="formula-term-subtitle"># of Full-Time Workers in the US</p>
 				          </Col>
 
 				          <Col>
@@ -34,8 +35,8 @@ export default class HomePage extends Component {
 				          </Col>
 
 				          <Col>
-				          	<h1 className="formula-term-title">$50K</h1>
-				          	<p className="formula-term-subtitle">Median Income</p>
+				          	<h1 className="formula-term-title">$47K</h1>
+				          	<p className="formula-term-subtitle">Median Income of Full Time Worker</p>
 				          </Col>
 
 				          <Col>
@@ -44,7 +45,7 @@ export default class HomePage extends Component {
 
 				          <Col>
 				          	<h1 className="formula-term-title">0.1%</h1>
-				          	<p className="formula-term-subtitle">Challenge</p>
+				          	<p className="formula-term-subtitle">Point One Percent Challenge</p>
 				          </Col>
 
 				          <Col>
@@ -52,7 +53,8 @@ export default class HomePage extends Component {
 				          </Col>
 
 				          <Col>
-				          	<h1 className="formula-term-title">$650,000,000,000</h1>
+				          	<h1 className="formula-term-title">$5,170,000,000</h1>
+				          	<p className="formula-term-subtitle">Collective Impact</p>
 				          </Col>
 				        </Row>
 					</Container>

@@ -13,7 +13,7 @@
 
 .home-page-content {
   background-color: #ffefe5;
-  height:100%;
+  height:100%g;
   padding-left:100px;
   padding-right:100px;
   padding-top:2em;
@@ -26,7 +26,7 @@
 }
 
 .challenge-button {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 20px;
   height: 40px;
   width: 200px;
@@ -56,7 +56,7 @@
 .message {
   width: 100%;
   font-size: 1.13vw;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Quicksand';
   margin: 0 auto;
   padding-top: 1em;
 }
@@ -67,32 +67,32 @@
 
 .formula-container .formula-term-title {
   width: 100%;
-  font-size: 3vw;
-  font-weight: bolder;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 3.5vw;
+  font-family: 'Bree Serif', serif;
   color: #246ba0
 }
 
 .formula-container .formula-term-subtitle {
-  width: 100%;
+  width: 104%;
   font-size: 0.9vw;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bree Serif', serif;
+  color: grey;
 }
 
 .formula-container .formula-term-operator {
   width: 100%;
   font-size: 2vw;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bree Serif', serif;
   padding-top: 0.5em;
   color: gray;
 }
 
 .donation-steps-row {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 2em;
+  padding-bottom: 0em;
   margin-left: 5em;
   margin-right: 5em;
-  margin-bottom:10em;
+  margin-bottom: 8em;
 }
 
 .donation-steps-column {
@@ -116,20 +116,23 @@
 }
 
 .donation-step-message {
-  font-size: 20px;
+  font-size: 1.46vw;
   margin-bottom: 20px;
+  font-family: 'Quicksand';
 }
 
 input {
   font-size:18px;
+  font-family: 'Quicksand';
+  font-weight: bolder;
   padding:10px 10px 10px 5px;
   display:block;
-  width:150px;
+  width:100%;
   border:none;
   border-bottom:1px solid #757575;
   position:relative;
-  left:25%;
   text-align: center;
+  background-color: #ffefe5;
 }
 
 input:focus {
@@ -152,6 +155,7 @@ input::-webkit-inner-spin-button {
   height: 3em;
   opacity: .5;
 }
+
 .hr-text:before {
   content: '';
   background: linear-gradient(to right, transparent, black, transparent);
@@ -171,4 +175,48 @@ input::-webkit-inner-spin-button {
   line-height: 3em;
   color: black;
   background-color: #fcfcfa;
+}
+
+.donation-page-content {
+  background-color: #ffefe5;
+  height:100%g;
+  padding-left:100px;
+  padding-right:100px;
+  padding-top:2em;
+  text-align: center;
+}
+
+.charity-card-deck {
+  margin: 0em 5em 1.5em 5em;
+}
+
+.card-title {
+  font-size:1.5vw;
+  font-family: 'Quicksand';
+  font-weight: bolder;
+}
+
+.card-text {
+  font-size:1vw;
+  font-family: 'Quicksand';
+}
+
+.card:hover .card-text, .card:hover .card-title {
+  color: white;
+}
+
+.card:hover { 
+  background-color: #246ba0;
+   /* First we need to help some browsers along for this to work.
+   Just because a vendor prefix is there, doesn't mean it will
+   work in a browser made by that vendor either, it's just for
+   future-proofing purposes I guess. */
+  -o-transition:0.75s;
+  -ms-transition:0.75s;
+  -moz-transition:0.75s;
+  -webkit-transition:0.75s;
+  /* ...and now for the proper property */
+  transition:0.75s;
+
+  text-color: white;
 }
