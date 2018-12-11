@@ -13,10 +13,10 @@
 
 .home-page-content {
   background-color: #ffefe5;
-  height:100vh;
+  height:100%;
   padding-left:100px;
   padding-right:100px;
-  padding-top:75px;
+  padding-top:2em;
   text-align: center;
 }
 
@@ -45,13 +45,46 @@
 }
 
 .slogan {
-  font-size: 100px;
+  width: 100%;
+  font-size: 3vw;
   font-family: 'Bree Serif', serif;
+  color: #246ba0;
+  padding-top: 0.5em;
+  padding-bottom: 0em;
 }
 
 .message {
-  font-size: 15px;
+  width: 100%;
+  font-size: 1.13vw;
   font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+.formula-container {
+  padding-top: 1.5em;
+}
+
+.formula-container .formula-term-title {
+  width: 100%;
+  font-size: 3vw;
+  font-weight: bolder;
+  font-family: 'Open Sans', sans-serif;
+  color: #246ba0
+}
+
+.formula-container .formula-term-subtitle {
+  width: 100%;
+  font-size: 0.9vw;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.formula-container .formula-term-operator {
+  width: 100%;
+  font-size: 2vw;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 0.5em;
+  color: gray;
 }
 
 .donation-steps-row {
